@@ -38,6 +38,14 @@ function start(port, opts = {}) {
     if (file === '/data/lesson06.enc.js') { if (opts.encFile) { res.setHeader('Content-Type', TYPES['.js']); return fs.createReadStream(opts.encFile).pipe(res); } file = '/tests/fixtures/fake06.enc.js'; }
     /* 共用功能的測試用三年級第 6 課的字詞資料（tests/fixtures/lesson06.words.js）當範例，圖片用一張空白圖代替 */
     if (file === '/data/lesson06.words.js' && !opts.realWords) file = '/tests/fixtures/lesson06.words.js';
+    /* 二年級還沒做到第 6 課時，首頁也要載入測試範例（第 6 課的字詞和加密課文） */
+    if (file === '/index.html') {
+      let src = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+      if (!src.includes('data/lesson06.words.js')) src = src.replace('<script src="data/crypto.js', '<script src="data/lesson06.words.js"></script>\n  <script src="data/crypto.js');
+      src = src.replace(/<script>\[([^\]]*)\]\.forEach/, (m, list) => list.includes("'06'") ? m : '<script>[' + (list ? list + ', ' : '') + "'06'].forEach");
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.end(src);
+    }
     if (/^\/images\/L06\//.test(file) && !fs.existsSync(path.join(ROOT, decodeURIComponent(file)))) file = '/tests/fixtures/placeholder.png';
     /* openLessons：測試還沒公開的課次；第 6 課（測試範例）一律打開 */
     if (file === '/data/lessons.js') {
