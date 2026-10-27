@@ -38,6 +38,13 @@
     dang: [['當', 'conj'], ['先發生的事', 'cond'], ['接著發生的事', 'res1']],
     keshi: [['做了什麼事', 'cond'], ['可是', 'conj'], ['跟想的不一樣的結果', 'res1']],
     buzhi: [['做什麼事', 'cond'], ['不只', 'conj'], ['要做的一件事', 'res1'], ['還', 'conj'], ['更進一步的事', 'res2']],
+    /* 二上的句型 */
+    que: [['誰想做的事', 'cond'], ['卻', 'conj'], ['相反的結果', 'res1']],
+    youyouhaiyou: [['什麼東西', 'cond'], ['有', 'conj'], ['第一個', 'res1'], ['有', 'conj'], ['第二個', 'res1'], ['還有', 'conj'], ['第三個', 'res2']],
+    youlegeng: [['有了', 'conj'], ['新的東西', 'cond'], ['原本的東西', 'res1'], ['更', 'conj'], ['變得怎麼樣', 'res1']],
+    yilike: [['誰', 'cond'], ['一', 'conj'], ['做什麼', 'cond'], ['立刻', 'conj'], ['馬上做的事', 'res1']],
+    cai2: [['做什麼事的時候', 'cond'], ['才', 'conj'], ['很少、很小的數量', 'res1']],
+    jiezhe: [['先做的事', 'cond'], ['接著', 'conj'], ['緊跟著做的事', 'res1']],
     /* 四上的句型 */
     youshi: [['什麼時候、誰', 'cond'], ['有時', 'conj'], ['第一種情形', 'res1'], ['有時', 'conj'], ['第二種情形', 'res1'], ['有時', 'conj'], ['第三種情形', 'res2']],
     yibian2: [['誰', 'cond'], ['一邊', 'conj'], ['第一件事', 'res1'], ['一邊', 'conj'], ['同時做的第二件事', 'res2']],
@@ -63,6 +70,7 @@
     yuqi: [['與其', 'conj'], ['不想選的事', 'cond'], ['不如', 'conj'], ['比較好的選擇', 'res1']]
   };
   var LABEL = { zhiyao: { cond: '條件', res1: '結果' }, ruguo: { cond: '假設', res1: '結果一', res2: '結果二' }, yinwei: { cond: '原因', res1: '結果' }, jingran: { cond: '發生的事', res1: '想不到的結果' }, cai: { cond: '先做到的事', res1: '接著發生的事' }, yibian: { cond: '這一邊', res1: '另一邊' }, xianzai: { cond: '什麼時候', res1: '第一件事', res2: '第二件事' }, chule: { cond: '做什麼事', res1: '第一個好處', res2: '第二個好處' }, youren: { cond: '有人做這個', res1: '有人做那個', res2: '大家怎麼了' }, caineng: { cond: '要先做到的事', res1: '會有的結果' }, meixiangdao: { cond: '本來以為', res1: '想不到的結果' }, jiu: { cond: '先發生的事', res1: '馬上跟著的結果' }, yihuier: { cond: '誰或什麼東西', res1: '第一種樣子', res2: '第二種樣子' }, weile: { cond: '想做到的事', res1: '做了什麼' }, erqie: { cond: '誰或什麼東西', res1: '第一個好地方', res2: '更進一步的好地方' }, rang: { cond: '先發生的事', res1: '接著出現的情形' }, yinsuo: { cond: '原因', res1: '結果' }, dang: { cond: '先發生的事', res1: '接著發生的事' }, keshi: { cond: '做了什麼事', res1: '不一樣的結果' }, buzhi: { cond: '做什麼事', res1: '要做的一件事', res2: '更進一步的事' },
+    que: { cond: '想做的事', res1: '相反的結果' }, youyouhaiyou: { cond: '第一個', res1: '第二個', res2: '第三個' }, youlegeng: { cond: '新的東西', res1: '變得怎麼樣' }, yilike: { cond: '先做的事', res1: '馬上做的事' }, cai2: { cond: '什麼時候', res1: '很少的數量' }, jiezhe: { cond: '先做的事', res1: '緊跟著做的事' },
     youshi: { cond: '什麼時候、誰', res1: '第一種情形', res2: '其他情形' }, yibian2: { cond: '誰', res1: '第一件事', res2: '同時做的事' }, buguan: { cond: '不一樣的情況', res1: '不變的結果' }, bulun: { cond: '不一樣的情況', res1: '不變的結果' }, dangjiu: { cond: '先發生的事', res1: '接著發生的事' }, budanhai: { cond: '第一件事', res1: '更進一步的事' }, chulehai: { cond: '第一件事', res1: '另外更多的事' }, ye: { cond: '第一件事', res1: '第二件事' }, ruguo1: { cond: '假設', res1: '會怎麼樣' }, shiyeshi: { cond: '誰', res1: '第一個', res2: '第二個' }, shihaishi: { cond: '第一個選擇', res1: '第二個選擇' }, wulun: { cond: '不一樣的情況', res1: '一直不變的事' }, meijing: { cond: '什麼事', res1: '想不到的結果' }, jiaru: { cond: '假設', res1: '會怎麼樣' }, budangeng: { cond: '第一件事', res1: '程度更高的事' }, suoyi: { cond: '原因', res1: '結果' }, ruguojiu: { cond: '假設', res1: '結果' }, yimian: { cond: '要做的事', res1: '不想發生的事' }, youyu: { cond: '原因', res1: '結果' }, suiran: { cond: '一件事', res1: '相反的結果' }, bushi: { cond: '第一個選擇', res1: '第二個選擇' }, yuqi: { cond: '不想選的', res1: '比較好的選擇' } };
 
   function formulaRow(key) {

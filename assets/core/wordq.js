@@ -332,7 +332,7 @@
     q.hints = { h1: { text: '想一想：' + card.name + '是' + card.meaning }, h2: { text: p.clue }, teach: { text: p.explain } };
     return q;
   }
-  var PATTERN_WORDS = { zhiyao: '「只要」和「就」', ruguo: '「如果」、「不但」、「還」', yinwei: '「因為」和「只能」', jingran: '「竟然」', cai: '「才」', yibian: '兩次「一邊」', xianzai: '「先」和「再」', chule: '「除了」和「還」', youren: '兩次「有人」', caineng: '「才能」', meixiangdao: '「沒想到」', jiu: '「就」', yihuier: '兩次「一會兒」', weile: '「為了」', erqie: '「而且」', rang: '「讓」', yinsuo: '「因為」和「所以」', dang: '「當」', keshi: '「可是」', buzhi: '「不只」和「還」',
+  var PATTERN_WORDS = { que: '「卻」', youyouhaiyou: '「有」、「有」、「還有」', youlegeng: '「有了」和「更」', yilike: '「一」和「立刻」', cai2: '「才」', jiezhe: '「接著」', zhiyao: '「只要」和「就」', ruguo: '「如果」、「不但」、「還」', yinwei: '「因為」和「只能」', jingran: '「竟然」', cai: '「才」', yibian: '兩次「一邊」', xianzai: '「先」和「再」', chule: '「除了」和「還」', youren: '兩次「有人」', caineng: '「才能」', meixiangdao: '「沒想到」', jiu: '「就」', yihuier: '兩次「一會兒」', weile: '「為了」', erqie: '「而且」', rang: '「讓」', yinsuo: '「因為」和「所以」', dang: '「當」', keshi: '「可是」', buzhi: '「不只」和「還」',
     youshi: '三次「有時」', yibian2: '兩次「一邊」', buguan: '「不管」和「都」', bulun: '「不論」和「總」', dangjiu: '「當」和「就」', budanhai: '「不但」和「還」', chulehai: '「除了」和「還」', ye: '「也」', ruguo1: '「如果」', shiyeshi: '「是」和「也是」', shihaishi: '「是」和「還是」', wulun: '「無論」和「始終」', meijing: '「沒想到」和「竟然」', jiaru: '「假如」', budangeng: '「不但」和「更」', suoyi: '「所以」', ruguojiu: '「如果」和「就」', yimian: '「以免」', youyu: '「由於」和「因此」', suiran: '「雖然」和「卻」', bushi: '「不是」和「就是」', yuqi: '「與其」和「不如」' };
   function speakMethod(rule) {
     if (rule.kind === 'phrase') return '先說它是什麼樣子，再說「的」，最後說它是什麼。';
