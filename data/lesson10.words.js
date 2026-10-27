@@ -115,14 +115,14 @@
     ],
     phrase: {
       pickName: '看圖選一選',
-      pickSay: '看圖，選出最適合的動作，說說看他連這個動作都不做。',
+      pickSay: '看圖，選出最適合的短語，說說看圖裡的人連什麼都不做。',
       intro: { example: '動也不動', img: 'pr-cat-still.png', parts: [{ text: '動', role: '動作' }, { text: '也不' }, { text: '動', role: '同一個動作' }],
         explain: '前面和後面放同一個動作，中間加上「也不」，表示連這個動作都不做，做得很快或很堅持。' },
       pick: [
-        { id: 'ph1', img: 'pr-not-look.png', before: '', join: '也不', noun: '看', ask: '什麼也不看', look: '再看看圖片，媽媽拿新衣服給弟弟，弟弟的眼睛在哪裡？', options: ['看', '跑', '唱', '飛'], clue: '提示：他的眼睛一直盯著電視，沒有轉過來。', explain: '答案是「看」，完整的短語是「看也不看」。' },
-        { id: 'ph2', img: 'pr-not-eat.png', before: '', join: '也不', noun: '吃', ask: '什麼也不吃', look: '再看看圖片，盤子裡有青菜，妹妹的嘴巴怎麼了？', options: ['吃', '跳', '寫', '洗'], clue: '提示：她把嘴巴閉得緊緊的，一口都不放進去。', explain: '答案是「吃」，完整的短語是「吃也不吃」。' },
-        { id: 'ph3', img: 'pr-not-ask.png', before: '', join: '也不', noun: '問', ask: '什麼也不問', look: '再看看圖片，男孩伸手拿走同學的鉛筆，他有沒有開口？', options: ['問', '吃', '睡', '跑'], clue: '提示：他沒有先說「可以借我嗎」，就直接拿走了。', explain: '答案是「問」，完整的短語是「問也不問」。' },
-        { id: 'ph4', img: 'pr-not-wash.png', before: '', join: '也不', noun: '洗', ask: '什麼也不洗', look: '再看看圖片，小男孩的手髒髒的，就要拿餅乾吃。', options: ['洗', '看', '唱', '飛'], clue: '提示：他沒有先去水龍頭那裡把手弄乾淨。', explain: '答案是「洗」，完整的短語是「洗也不洗」。' }
+        { id: 'ph1', img: 'pr-not-look.png', before: '', join: '', noun: '。', ask: '圖裡的人怎麼做', look: '再看看圖片，媽媽拿新衣服給弟弟，弟弟的眼睛在哪裡？', options: ['看也不看', '吃也不吃', '問也不問', '洗也不洗'], clue: '提示：他的眼睛一直盯著電視，沒有轉過來。', explain: '答案是「看」，圖裡的人看也不看。' },
+        { id: 'ph2', img: 'pr-not-eat.png', before: '', join: '', noun: '。', ask: '圖裡的人怎麼做', look: '再看看圖片，盤子裡有青菜，妹妹的嘴巴怎麼了？', options: ['吃也不吃', '看也不看', '問也不問', '洗也不洗'], clue: '提示：她把嘴巴閉得緊緊的，一口都沒放進去。', explain: '答案是「吃」，圖裡的人吃也不吃。' },
+        { id: 'ph3', img: 'pr-not-ask.png', before: '', join: '', noun: '。', ask: '圖裡的人怎麼做', look: '再看看圖片，男孩伸手拿走同學的鉛筆，他有沒有開口？', options: ['問也不問', '看也不看', '吃也不吃', '洗也不洗'], clue: '提示：他沒有先說「可以借我嗎」，就直接拿走了。', explain: '答案是「問」，圖裡的人問也不問。' },
+        { id: 'ph4', img: 'pr-not-wash.png', before: '', join: '', noun: '。', ask: '圖裡的人怎麼做', look: '再看看圖片，小男孩的手髒髒的，就要拿餅乾吃。', options: ['洗也不洗', '看也不看', '吃也不吃', '問也不問'], clue: '提示：他沒有先去水龍頭那裡把手弄乾淨。', explain: '答案是「洗」，圖裡的人洗也不洗。' }
       ],
       fill: [
         { id: 'pf1', img: 'pr-not-look.png', parts: ['看', '也不', '看'] },
