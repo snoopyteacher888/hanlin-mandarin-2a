@@ -2,8 +2,11 @@
 (function (root) {
   var H3A = root.H3A; var h = H3A.ui.h;
   var ANIMALS = [['bear', '🐻', '小熊'], ['rabbit', '🐰', '兔子'], ['cat', '🐱', '小貓'], ['dog', '🐶', '小狗'], ['panda', '🐼', '熊貓'],
-    ['tiger', '🐯', '老虎'], ['lion', '🦁', '獅子'], ['monkey', '🐵', '猴子'], ['pig', '🐷', '小豬'], ['frog', '🐸', '青蛙'],
-    ['penguin', '🐧', '企鵝'], ['fox', '🦊', '狐狸']];
+    ['tiger', '🐯', '老虎'], ['lion', '🦁', '獅子'], ['monkey', '🐵', '猴子'], ['frog', '🐸', '青蛙'], ['penguin', '🐧', '企鵝'],
+    ['fox', '🦊', '狐狸'], ['koala', '🐨', '無尾熊'], ['hamster', '🐹', '倉鼠'], ['unicorn', '🦄', '獨角獸'], ['dolphin', '🐬', '海豚'],
+    ['owl', '🦉', '貓頭鷹'], ['turtle', '🐢', '烏龜'], ['butterfly', '🦋', '蝴蝶'], ['whale', '🐳', '鯨魚'], ['giraffe', '🦒', '長頸鹿'],
+    ['elephant', '🐘', '大象'], ['hedgehog', '🦔', '刺蝟'], ['squirrel', '🐿️', '松鼠'], ['parrot', '🦜', '鸚鵡'], ['ladybug', '🐞', '瓢蟲'],
+    ['deer', '🦌', '小鹿'], ['chick', '🐥', '小雞'], ['seal', '🦭', '海豹'], ['octopus', '🐙', '章魚'], ['horse', '🐴', '小馬']];
   var RESULT = { first: '✅ 第一次就答對', hint1: '🟡 答錯 1 次後答對', hint2: '🟠 答錯 2 次後答對', taught: '📘 答錯 3 次，看了老師說明', wrong: '❌ 答錯', pending: '👩‍🏫 等老師批改' };
   var PLACE = { home: '家裡', school: '學校' };
   /* 名冊只留名字中間的字：王宥廷 → O宥O、陳安 → O安、歐陽宥廷 → OO宥O；不是 2～4 個中文字或是動物名稱就照原樣 */
