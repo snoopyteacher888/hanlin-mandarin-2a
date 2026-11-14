@@ -56,7 +56,7 @@ test('第 7 課課次頁：有字詞活動，沒有成語、修辭', async () =>
 
 test('第 7 課每個字詞活動的第一個畫面都正常', async () => {
   const p = await page();
-  for (const a of ['hanzi', 'vocab', 'charword', 'similar', 'listen', 'phrase', 'pattern', 'hanzi?step=pick', 'hanzi?step=fix', 'vocab?step=picmatch', 'vocab?step=memory', 'charword?step=meaning', 'sentence', 'sentence?step=say', 'phrase?step=fill1', 'phrase?step=intro2', 'phrase?step=pick2', 'phrase?step=fill2', 'pattern?p=youyouhaiyou', 'pattern?p=budanhai&step=fill']) {
+  for (const a of ['hanzi', 'vocab', 'charword', 'similar', 'listen', 'phrase', 'pattern', 'hanzi?step=pick', 'hanzi?step=fix', 'vocab?step=picmatch', 'vocab?step=memory', 'charword?step=meaning', 'sentence', 'sentence?step=pick', 'sentence?step=link', 'sentence?step=say', 'phrase?step=fill1', 'phrase?step=intro2', 'phrase?step=pick2', 'phrase?step=fill2', 'pattern?p=youyouhaiyou', 'pattern?p=budanhai&step=fill']) {
     await p.goto(BASE + '#/L07/' + a + (a.includes('?') ? '&' : '?') + 's=bear');
     await p.waitForSelector('main .prompt, main h2, main .mem-card', { timeout: 5000 });
     assert.equal(await p.$('.notice'), null, a + ' 顯示「還沒準備好」');
