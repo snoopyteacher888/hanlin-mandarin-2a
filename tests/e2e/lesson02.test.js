@@ -49,14 +49,14 @@ test('第 2 課課次頁：有字詞活動，沒有成語、修辭', async () =>
   const p = await page(); await p.goto(BASE + '#/L02?s=bear');
   await p.waitForSelector('[data-activity="hanzi"]');
   const acts = await p.$$eval('[data-activity]', x => x.map(e => e.dataset.activity));
-  ['hanzi', 'vocab', 'charword', 'similar', 'listen', 'phrase', 'pattern'].forEach(a => assert.ok(acts.includes(a), a));
+  ['hanzi', 'vocab', 'sentence', 'similar', 'listen', 'phrase', 'pattern'].forEach(a => assert.ok(acts.includes(a), a));
   assert.ok(!acts.includes('idiom') && !acts.includes('rhetoric'), acts.join());
   assert.deepEqual(p.errors, []);
 });
 
 test('第 2 課每個字詞活動的第一個畫面都正常', async () => {
   const p = await page();
-  for (const a of ['hanzi', 'vocab', 'charword', 'similar', 'listen', 'phrase', 'pattern', 'hanzi?step=pick', 'hanzi?step=fix', 'vocab?step=picmatch', 'vocab?step=memory', 'charword?step=meaning', 'phrase?step=fill1', 'pattern?p=que']) {
+  for (const a of ['hanzi', 'vocab', 'charword', 'similar', 'listen', 'phrase', 'pattern', 'hanzi?step=pick', 'hanzi?step=fix', 'vocab?step=picmatch', 'vocab?step=memory', 'charword?step=meaning', 'sentence', 'sentence?step=say', 'phrase?step=fill1', 'pattern?p=que']) {
     await p.goto(BASE + '#/L02/' + a + (a.includes('?') ? '&' : '?') + 's=bear');
     await p.waitForSelector('main .prompt, main h2, main .mem-card', { timeout: 5000 });
     assert.equal(await p.$('.notice'), null, a + ' 顯示「還沒準備好」');
