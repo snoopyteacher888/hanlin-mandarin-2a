@@ -20,7 +20,7 @@ test('home button opens the worksheet; sections, toggles and shuffle work', asyn
   await p.click('.picker-card[data-student="bear"]');
   await p.click('.ws-open');
   await p.waitForSelector('.ws-sheet');
-  assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
+  await p.waitForFunction(n => { const t = document.querySelector('.ws-title'); return t && t.innerText.replace(/[\uDB40-\uDBFF][\uDC00-\uDFFF]/g, '').includes('第 ' + n + ' 課'); }, '1'); assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
   // 沒有解開的課文：沒有閱讀理解
   assert.equal(await p.locator('.ws-reading').count(), 0);
   const secs = await p.locator('.ws-sheet:not(.ws-answers) .ws-sec').count();
@@ -47,7 +47,7 @@ test('home button opens the worksheet; sections, toggles and shuffle work', asyn
   await p.uncheck('input[data-key="fix"]');
   // 換課
   await p.selectOption('.ws-lesson', 'L01');
-  assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
+  await p.waitForFunction(n => { const t = document.querySelector('.ws-title'); return t && t.innerText.replace(/[\uDB40-\uDBFF][\uDC00-\uDFFF]/g, '').includes('第 ' + n + ' 課'); }, '1'); assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
   const before = await p.locator('.ws-sheet').first().innerText();
   await p.click('.ws-shuffle');
   assert.notEqual(await p.locator('.ws-sheet').first().innerText(), before);
@@ -68,5 +68,5 @@ test('deep link #/worksheet/L01 picks the lesson', async () => {
   const p = await (await browser.newContext()).newPage();
   await p.goto(BASE + '#/worksheet/L01');
   await p.waitForSelector('.ws-sheet');
-  assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
+  await p.waitForFunction(n => { const t = document.querySelector('.ws-title'); return t && t.innerText.replace(/[\uDB40-\uDBFF][\uDC00-\uDFFF]/g, '').includes('第 ' + n + ' 課'); }, '1'); assert.match(await p.locator('.ws-title').first().innerText(), /第 1 課/);
 });
